@@ -81,6 +81,10 @@ pip
 ```
 sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install python-pip
+
+In case of problems you might need:
+sudo -i
+for pkg in $(dpkg --get-selections | egrep -v 'deinstall' | egrep python | awk '{print $1}'); do  apt-get -y --force-yes install --reinstall $pkg ; done
 ```
 python
 ```
