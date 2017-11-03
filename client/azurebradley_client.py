@@ -170,8 +170,8 @@ def iothub_client_sample_run():
         while True:
             data = {}
             for tag in config["tags"]:
-                value, = proxy("192.168.0.57").read(tag)
-                #value, = proxy(config["plc-ipaddress"]).read(tag)
+                #value, = proxy("192.168.0.57").read(tag)
+                value, = proxy(config["plc-ipaddress"]).read(tag)
                 data[tag] = value[0]
 
             msg_txt = json.dumps(data)
