@@ -86,6 +86,11 @@ In case of problems you might need:
 sudo -i
 for pkg in $(dpkg --get-selections | egrep -v 'deinstall' | egrep python | awk '{print $1}'); do  apt-get -y --force-yes install --reinstall $pkg ; done
 ```
+Alternative pip install
+```
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+```
 python
 ```
 sudo apt-get install python3.5
