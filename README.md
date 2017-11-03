@@ -77,25 +77,30 @@ Confirmation[9] received for message with result = OK
 ```
 Ubuntu Install
 --------------
+pip
+```
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install python-pip
+```
 python
----
+```
 sudo apt-get install python3.5
----
+```
 cmake
----
+```
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:george-edison55/cmake-3.x
 sudo apt-get update
 sudo apt-get install cmake
----
+```
 
 gcc
----
+```
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install gcc-4.9 g++-4.9
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
----
+```
 
 Note on the authorship
 ----------------------
